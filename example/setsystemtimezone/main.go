@@ -24,13 +24,13 @@ func getCurrentTimeZoneKeyName() (string, error) {
 var timeZoneName string
 
 func init() {
-	flag.StringVar(&timeZoneName, "s", "", `TimeZone name. (ex: "Tokyo Standard Name")`)
+	flag.StringVar(&timeZoneName, "s", "", `TimeZone name. (ex: "Tokyo Standard Time")`)
 }
 
 func main() {
 	flag.Parse()
 	if timeZoneName == "" {
-		fmt.Println(`Please specify TimeZone name like "Tokyo Standard Name" with double quotes`)
+		fmt.Println(`Please specify TimeZone name like "Tokyo Standard Time" with double quotes`)
 		os.Exit(1)
 	}
 
